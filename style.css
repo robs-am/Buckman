@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.header-top {
+  height: 33px;
+  background-color: #f1f1f1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.rewards-bar {
+  display: flex;
+  padding: 7px 50px;
+  align-items: center;
+  gap: 10px;
+  color: #101820;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.rewards-bar span {
+  font-weight: 700;
+}
+
+.buckman__ul {
+  display: flex;
+}
+
+.buckman__li {
+  list-style: none;
+  padding: 40px 19px;
+}
+
+a {
+  text-decoration: none;
+  color: #101820;
+  font-weight: 700;
+  font-size: 12px;
+}
+ul:last-child {
+  color: #e32000;
+}
+.search-bar {
+  display: flex;
+  position: relative;
+}
+.search-bar button {
+  border: none;
+  background: none;
+  position: absolute;
+  right: 3px;
+}
+
+input::placeholder {
+  font-size: 14px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Lato", sans-serif;
+  padding-bottom: 10px;
+  color: #101820;
+}
+
+#site-search {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #d9d9d9;
+  width: 255px;
+  height: 35px;
+}
+
+.header-direito {
+  display: flex;
+  gap: 30px;
+}
+
+[data-menu="button"] {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  [data-menu="button"] {
+    display: block;
+  }
+  .nossas-lojas,
+  .login {
+    display: none;
+  }
+
+  .header-top {
+    overflow-y: hidden;
+    height: 35px;
+    overflow-x: scroll;
+  }
+
+  .rewards-bar {
+    display: flex;
+    flex-direction: row;
+    padding-block: 7px;
+    gap: 7px;
+    padding-inline: 10px;
+  }
+}
