@@ -107,12 +107,17 @@ input::placeholder {
     align-items: center;
     position: absolute;
     top: 50px;
-    left: 2%;
+    left: 5%;
     z-index: 300;
 
     cursor: pointer;
     background: none;
     border: none;
+  }
+  .header-direito .minicart {
+    position: absolute;
+    top: 45px;
+    right: 6%;
   }
   [data-menu="button"]::before {
     content: url("./assets/svg/menu-mobile.svg");
@@ -139,12 +144,6 @@ input::placeholder {
     display: none;
   }
 
-  .header-direito .minicart {
-    position: absolute;
-    top: 45px;
-    right: 3%;
-  }
-
   .header-top {
     overflow-y: hidden;
     height: 35px;
@@ -165,5 +164,9 @@ input::placeholder {
 
   .buckman__li {
     padding-left: 0;
+  }
+  #site-search {
+    width: 331px;
+    text-align: center;
   }
 }
