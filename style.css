@@ -95,7 +95,10 @@ input::placeholder {
   display: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
   [data-menu="button"] {
     display: flex;
     align-items: center;
@@ -108,7 +111,8 @@ input::placeholder {
     content: url("./assets/svg/menu-mobile.svg");
     background-color: transparent;
   }
-  .nossas-lojas,
+
+  .header-direito .nossas-lojas,
   .login {
     display: none;
   }
@@ -125,5 +129,9 @@ input::placeholder {
     padding-block: 7px;
     gap: 7px;
     padding-inline: 10px;
+  }
+
+  .buckman__li {
+    padding-left: 0;
   }
 }
