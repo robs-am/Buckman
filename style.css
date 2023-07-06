@@ -96,12 +96,19 @@ input::placeholder {
 }
 
 @media (max-width: 640px) {
-  body {
-    overflow-x: hidden;
+  .header-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   [data-menu="button"] {
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 2%;
+    z-index: 300;
 
     cursor: pointer;
     background: none;
@@ -112,15 +119,40 @@ input::placeholder {
     background-color: transparent;
   }
 
+  [data-menu="list"] {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background: #fff;
+    display: none;
+    left: 2%;
+    z-index: 100;
+  }
+
+  .buckman__li {
+    padding-inline: 0;
+    padding-block: 26px;
+  }
+
   .header-direito .nossas-lojas,
   .login {
     display: none;
+  }
+
+  .header-direito .minicart {
+    position: absolute;
+    top: 45px;
+    right: 3%;
   }
 
   .header-top {
     overflow-y: hidden;
     height: 35px;
     overflow-x: scroll;
+  }
+
+  .buckman-logo {
+    margin-block: 14px;
   }
 
   .rewards-bar {
