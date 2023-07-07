@@ -95,6 +95,10 @@ input::placeholder {
   display: none;
 }
 
+[data-menu-aberto="button"] {
+  display: none;
+}
+
 @media (max-width: 640px) {
   .header-bottom {
     display: flex;
@@ -106,7 +110,7 @@ input::placeholder {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 50px;
+    top: 51px;
     left: 5%;
     z-index: 300;
 
@@ -116,7 +120,7 @@ input::placeholder {
   }
   .header-direito .minicart {
     position: absolute;
-    top: 45px;
+    top: 44px;
     right: 6%;
   }
   [data-menu="button"]::before {
@@ -129,14 +133,20 @@ input::placeholder {
     position: absolute;
     flex-direction: column;
     background: #fff;
-    display: none;
+    /*  display: none; */
     left: 2%;
     z-index: 100;
+
+    /* menu-aberto */
+
+    margin-left: 16px;
+    margin-top: 52px;
+    width: 360px;
   }
 
   .buckman__li {
     padding-inline: 0;
-    padding-block: 26px;
+    padding-block: 15px;
   }
 
   .header-direito .nossas-lojas,
@@ -151,7 +161,8 @@ input::placeholder {
   }
 
   .buckman-logo {
-    margin-block: 14px;
+    margin-top: 14px;
+    margin-bottom: 22px;
   }
 
   .rewards-bar {
@@ -166,7 +177,7 @@ input::placeholder {
     padding-left: 0;
   }
   #site-search {
-    width: 331px;
+    width: 366px;
     text-align: center;
   }
 }

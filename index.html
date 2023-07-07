@@ -49,13 +49,19 @@
         />
         <nav class="buckman-navbar">
           <button data-menu="button"></button>
+          <button data-menu-aberto="button">Menu</button>
           <ul data-menu="list" id="menu" class="buckman__ul">
             <li class="buckman__li"><a href="#">ROUPAS</a></li>
             <li class="buckman__li">
               <a href="#">NOVIDADES</a>
-              <div><!-- fazer sidebar aqui --></div>
+              <!--     <ul class="submenu-novidades">
+                <li><a href="#">Blusas</a></li>
+                <li><a href="#">Calças</a></li>
+                <li><a href="#">Calças Jeans</a></li>
+                <li><a href="#">Camisas</a></li>
+                <li><a href="#">Camisetas</a></li>
+              </ul> -->
             </li>
-
             <li class="buckman__li"><a href="#">BÁSICOS</a></li>
             <li class="buckman__li"><a href="#">ALFAIATARIAS</a></li>
             <li class="buckman__li"><a href="#">CALÇADOS</a></li>
@@ -76,16 +82,18 @@
         </div>
 
         <div class="header-direito">
-          <a class="nossas-lojas" href="#"
+          <a class="nossas-lojas" class="category-on" href="#"
             ><img src="./assets/svg/location.svg"</a
           >
 
-          <a class="login" href="#"><img src="./assets/svg/login.svg"</a>
+          <a class="login" class="category-on" href="#"
+            ><img src="./assets/svg/login.svg"</a
+          >
 
           <a class="minicart" href="#"><img src="./assets/svg/minicart.svg"</a>
         </div>
       </div>
     </header>
+    <script src="./menu-mobile.js"></script>
   </body>
-  <script src="./menu-mobile.js"></script>
 </html>
