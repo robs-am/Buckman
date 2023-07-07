@@ -31,10 +31,8 @@ function toggleMenu() {
 menuButton.addEventListener("click", toggleMenu);
 closeButton.addEventListener("click", toggleMenu);
 
-/* const closeButton = document.querySelector('[data-menu="mobile-close"]');
+const showDivion = document.querySelector("line-mobile");
 
-function closeMenu() {
-  closeButton.classList.toggle("active");
+function showLineDivision() {
+  showDivion.classList.add("active");
 }
-
-closeButton.addEventListener("click", closeMenu); */
