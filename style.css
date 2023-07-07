@@ -152,6 +152,11 @@ input::placeholder {
   .buckman__li {
     padding-inline: 0;
     padding-block: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .buckman__li::after {
+    content: url(./assets/svg/arrow.svg);
   }
 
   .header-direito .nossas-lojas,
