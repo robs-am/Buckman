@@ -14,10 +14,14 @@ openMenu(); */
 
 const menuButton = document.querySelector('[data-menu="button"]');
 const menuList = document.querySelector('[data-menu="list"]');
+const hideLogo = document.querySelector('[data-menu="logo"]');
+const hideSearch = document.querySelector('[data-menu="search-bar"]');
 
 function toggleMenu() {
   menuList.classList.toggle("active");
   menuButton.classList.toggle("active");
+  hideLogo.classList.toggle("active");
+  hideSearch.classList.toggle("active");
 }
 
 menuButton.addEventListener("click", toggleMenu);

@@ -106,6 +106,21 @@ input::placeholder {
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  [data-menu="logo"].active {
+    display: none;
+  }
+  [data-menu="search-bar"].active {
+    display: none;
+  }
+
+  .header-direito .minicart {
+    position: absolute;
+    top: 44px;
+    right: 6%;
+  }
+
+  /* menu-aberto */
   [data-menu="button"] {
     display: flex;
     align-items: center;
@@ -126,6 +141,7 @@ input::placeholder {
 
   [data-menu="button"].active::after {
     content: "Menu";
+    font-family: "Lato", sans-serif;
     width: 300px;
     background-color: #fff;
     position: absolute;
@@ -138,14 +154,9 @@ input::placeholder {
     width: 29px;
     height: 34px;
     font-size: 20px;
+    font-weight: 700;
+    line-height: 16px;
   }
-
-  .header-direito .minicart {
-    position: absolute;
-    top: 44px;
-    right: 6%;
-  }
-
   [data-menu="list"] {
     display: flex;
     position: absolute;
@@ -155,8 +166,6 @@ input::placeholder {
     left: 2%;
     z-index: 100;
   }
-
-  /* menu-aberto */
 
   [data-menu="list"].active {
     margin-left: 16px;
