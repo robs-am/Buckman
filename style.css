@@ -107,13 +107,6 @@ input::placeholder {
     flex-wrap: wrap;
   }
 
-  [data-menu="logo"].active {
-    display: none;
-  }
-  [data-menu="search-bar"].active {
-    display: none;
-  }
-
   .header-direito .minicart {
     position: absolute;
     top: 44px;
@@ -172,6 +165,16 @@ input::placeholder {
     margin-top: 52px;
     width: 370px;
     display: block;
+  }
+
+  [data-menu="logo"].active {
+    display: none;
+  }
+  [data-menu="search-bar"].active {
+    display: none;
+  }
+  [data-menu="minicart"].active {
+    display: none;
   }
 
   .buckman__li {
