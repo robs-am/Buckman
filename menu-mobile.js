@@ -29,6 +29,7 @@ function toggleMenu() {
 }
 
 menuButton.addEventListener("click", toggleMenu);
+closeButton.addEventListener("click", toggleMenu);
 
 /* const closeButton = document.querySelector('[data-menu="mobile-close"]');
 

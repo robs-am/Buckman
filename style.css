@@ -146,7 +146,7 @@ button {
     width: 300px;
     background-color: #fff;
     position: absolute;
-    top: 51px;
+    top: 49px;
     left: 5%;
     z-index: 301;
     top: 0;
@@ -187,6 +187,10 @@ button {
 
   [data-menu="mobile-close"].active {
     display: block;
+    position: absolute;
+    right: 20px;
+
+    top: 48px;
   }
 
   .buckman__li {
@@ -194,6 +198,7 @@ button {
     padding-block: 15px;
     display: flex;
     justify-content: space-between;
+    margin-right: 5px;
   }
   .buckman__li::after {
     content: url(./assets/svg/arrow.svg);
