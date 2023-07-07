@@ -124,6 +124,22 @@ input::placeholder {
     background-color: transparent;
   }
 
+  [data-menu="button"].active::after {
+    content: "Menu";
+    width: 300px;
+    background-color: #fff;
+    position: absolute;
+    top: 51px;
+    left: 5%;
+    z-index: 301;
+    top: 0;
+    left: 2%;
+    z-index: 301;
+    width: 29px;
+    height: 34px;
+    font-size: 20px;
+  }
+
   .header-direito .minicart {
     position: absolute;
     top: 44px;
