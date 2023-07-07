@@ -1,6 +1,6 @@
 /* export default function initMenuMobile() {} */
 
-const menuButton = document.querySelector('[data-menu="button"]');
+/* const menuButton = document.querySelector('[data-menu="button"]');
 const menuList = document.querySelector('[data-menu="list"]');
 
 function openMenu(event) {
@@ -10,4 +10,14 @@ function openMenu(event) {
 
 menuButton.addEventListener("click", openMenu);
 
-openMenu();
+openMenu(); */
+
+const menuButton = document.querySelector('[data-menu="button"]');
+const menuList = document.querySelector('[data-menu="list"]');
+
+function toggleMenu() {
+  menuList.classList.toggle("active");
+  menuButton.classList.toggle("active");
+}
+
+menuButton.addEventListener("click", toggleMenu);
