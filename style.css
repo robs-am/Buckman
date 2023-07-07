@@ -180,7 +180,7 @@ button {
 
   [data-menu="list"].active {
     margin-top: 52px;
-    width: 370px;
+    width: 95%;
     display: block;
     padding-inline: 12px;
   }

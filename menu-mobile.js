@@ -34,3 +34,11 @@ function toggleMenu() {
 
 menuButton.addEventListener("click", toggleMenu);
 closeButton.addEventListener("click", toggleMenu);
+
+const headerDireito = document.querySelector('[data-menu="header-direito"]');
+
+function toggleHeaderDireito() {
+  headerDireito.classList.toggle("active");
+}
+
+headerDireito.addEventListener("click", toggleHeaderDireito);
