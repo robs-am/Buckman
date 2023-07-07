@@ -7,6 +7,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.header-top {
+  margin: 0;
+}
+
 .header-bottom {
   display: flex;
   align-items: center;
@@ -178,6 +182,7 @@ button {
     margin-top: 52px;
     width: 370px;
     display: block;
+    padding-inline: 12px;
   }
 
   [data-menu="logo"].active {
@@ -188,6 +193,13 @@ button {
   }
   [data-menu="minicart"].active {
     display: none;
+  }
+
+  [data-menu="login"].active {
+    display: block;
+  }
+  [data-menu="nossas-lojas"].active {
+    display: block;
   }
 
   [data-menu="mobile-close"].active {
@@ -208,7 +220,7 @@ button {
     content: url(./assets/svg/arrow.svg);
   }
 
-  .header-direito .nossas-lojas,
+  .nossas-lojas,
   .login {
     display: none;
   }
@@ -242,5 +254,6 @@ button {
 
   .line-mobile {
     display: block;
+    margin-top: 2rem;
   }
 }
