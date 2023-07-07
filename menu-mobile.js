@@ -17,6 +17,7 @@ const menuList = document.querySelector('[data-menu="list"]');
 const hideLogo = document.querySelector('[data-menu="logo"]');
 const hideSearch = document.querySelector('[data-menu="search-bar"]');
 const hideMinicart = document.querySelector('[data-menu="minicart"]');
+const closeButton = document.querySelector('[data-menu="mobile-close"]');
 
 function toggleMenu() {
   menuList.classList.toggle("active");
@@ -24,6 +25,15 @@ function toggleMenu() {
   hideLogo.classList.toggle("active");
   hideSearch.classList.toggle("active");
   hideMinicart.classList.toggle("active");
+  closeButton.classList.toggle("active");
 }
 
 menuButton.addEventListener("click", toggleMenu);
+
+/* const closeButton = document.querySelector('[data-menu="mobile-close"]');
+
+function closeMenu() {
+  closeButton.classList.toggle("active");
+}
+
+closeButton.addEventListener("click", closeMenu); */

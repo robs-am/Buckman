@@ -91,6 +91,14 @@ input::placeholder {
   gap: 30px;
 }
 
+button {
+  border: none;
+  background: transparent;
+}
+
+[data-menu="mobile-close"] {
+  display: none;
+}
 [data-menu="button"] {
   display: none;
 }
@@ -175,6 +183,10 @@ input::placeholder {
   }
   [data-menu="minicart"].active {
     display: none;
+  }
+
+  [data-menu="mobile-close"].active {
+    display: block;
   }
 
   .buckman__li {
