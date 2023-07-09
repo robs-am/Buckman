@@ -64,11 +64,18 @@
           </button>
 
           <ul data-menu="list" id="menu" class="buckman__ul">
-            <li class="buckman__li">
-              <a href="#">ROUPAS</a>
+            <li data-dropdown id="roupas" class="buckman__li">
+              <a href="#roupas">ROUPAS</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+              </ul>
             </li>
-            <li data-dropdown class="buckman__li">
-              <a href="#">NOVIDADES</a>
+            <li data-menu="novidades" data-dropdown class="buckman__li">
+              <a href="#novidades">NOVIDADES</a>
               <ul class="dropdown-menu">
                 <li><a href="#">Blusas</a></li>
                 <li><a href="#">Calças</a></li>
@@ -77,10 +84,46 @@
                 <li><a href="#">Camisetas</a></li>
               </ul>
             </li>
-            <li class="buckman__li"><a href="#">BÁSICOS</a></li>
-            <li class="buckman__li"><a href="#">ALFAIATARIAS</a></li>
-            <li class="buckman__li"><a href="#">CALÇADOS</a></li>
-            <li class="buckman__li"><a class="outlet" href="#">OUTLET</a></li>
+            <li data-dropdown id="basicos" class="buckman__li">
+              <a href="#basicos">BÁSICOS</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+              </ul>
+            </li>
+            <li data-dropdown class="buckman__li">
+              <a href="#alfaiatarias">ALFAIATARIAS </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+              </ul>
+            </li>
+            <li data-dropdown class="buckman__li">
+              <a href="#calcados">CALÇADOS</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+              </ul>
+            </li>
+            <li data-dropdown class="buckman__li">
+              <a class="outlet" href="#outlet">OUTLET</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+              </ul>
+            </li>
             <hr class="line-mobile" />
           </ul>
         </nav>
@@ -110,7 +153,6 @@
           <button data-menu="favoritos" class="favoritos">
             <a href="#"><img src="./assets/svg/heart.svg" /></a>
           </button>
-
           <button data-menu="fale-conosco" class="fale-conosco">
             <a href="#"><img src="./assets/svg/fale-conosco.svg" /></a>
           </button>
@@ -121,6 +163,6 @@
       </div>
     </header>
     <script src="./menu-mobile.js"></script>
-    <script src="./dropdown-menu.js"></script>
+    <script src="./category-menu.js"></script>
   </body>
 </html>
