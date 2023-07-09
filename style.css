@@ -65,6 +65,44 @@ a {
 .outlet {
   color: #e32000;
 }
+
+/* dropdown-menu */
+
+[data-dropdown] .dropdown-menu {
+  display: none;
+}
+
+[data-dropdown]:hover .dropdown-menu {
+  display: block;
+}
+
+/* [data-dropdown] {
+  position: relative;
+} */
+
+.dropdown-menu {
+  position: absolute;
+  top: 110px;
+  background: #fff;
+  /*  border: 1px solid #101820; */
+  z-index: 100;
+}
+
+.dropdown-menu li {
+  padding-bottom: 20px;
+  list-style: none;
+}
+
+.dropdown-menu a {
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.dropdown-menu a:hover {
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 2px;
+}
+
 .search-bar {
   display: flex;
   position: relative;
