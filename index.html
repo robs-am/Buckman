@@ -20,25 +20,34 @@
   </head>
   <body>
     <header>
-      <div class="header-top">
-        <p class="rewards-bar">
-          ENTREGA<span>EXPRESSA</span
-          ><img src="./assets/svg/rocket.svg" alt="entrega expressa" />
-        </p>
-        <span class="rewards-bar">
-          <span>TROQUE</span> EM QUALQUER LOJA<img
-            src="./assets/svg/troca.svg"
-            alt="troque em qualquer loja"
-          />
-        </span>
-        <p class="rewards-bar">
-          ATÉ 6X <span>SEM JUROS</span
-          ><img src="./assets/svg/card.svg" alt="" />
-        </p>
-        <p class="rewards-bar">
-          EMBALE PARA <span>PRESENTE</span
-          ><img src="./assets/svg/gift.svg" alt="" />
-        </p>
+      <div data-menu="header-top" class="header-top">
+        <div data-menu="rewards-bar" class="rewards-bar">
+          <div class="entrega">
+            <img src="./assets/svg/rocket.svg" />
+            <span class="entrega"
+              >ENTREGA <span class="bold">EXPRESSA</span></span
+            >
+          </div>
+
+          <div class="troque">
+            <img src="./assets/svg/troca.svg" />
+            <span class="troca"
+              ><span class="bold">TROQUE</span> EM QUALQUER LOJA</span
+            >
+          </div>
+          <div class="juros">
+            <img src="./assets/svg/card.svg" />
+            <span class="sem-juros"
+              >ATÉ 6X <span class="bold">SEM JUROS</span></span
+            >
+          </div>
+          <div class="presente">
+            <img src="./assets/svg/gift.svg" />
+            <span class="embale-presente"
+              >EMBALE PARA <span class="bold">PRESENTE</span></span
+            >
+          </div>
+        </div>
       </div>
 
       <div class="header-bottom">
@@ -55,21 +64,23 @@
           </button>
 
           <ul data-menu="list" id="menu" class="buckman__ul">
-            <li class="buckman__li"><a href="#">ROUPAS</a></li>
             <li class="buckman__li">
+              <a href="#">ROUPAS</a>
+            </li>
+            <li data-dropdown class="buckman__li">
               <a href="#">NOVIDADES</a>
-              <!--     <ul class="submenu-novidades">
+              <ul class="dropdown-menu">
                 <li><a href="#">Blusas</a></li>
                 <li><a href="#">Calças</a></li>
                 <li><a href="#">Calças Jeans</a></li>
                 <li><a href="#">Camisas</a></li>
                 <li><a href="#">Camisetas</a></li>
-              </ul> -->
+              </ul>
             </li>
             <li class="buckman__li"><a href="#">BÁSICOS</a></li>
             <li class="buckman__li"><a href="#">ALFAIATARIAS</a></li>
             <li class="buckman__li"><a href="#">CALÇADOS</a></li>
-            <li class="buckman__li"><a href="#">OUTLET</a></li>
+            <li class="buckman__li"><a class="outlet" href="#">OUTLET</a></li>
             <hr class="line-mobile" />
           </ul>
         </nav>
@@ -85,34 +96,31 @@
             /></a>
           </button>
         </div>
-        <!--  <button data-menu="mobile-close" class="mobile-close">
-          <a href="#"><img src="./assets/svg/x-close.svg" /></a>
-        </button> -->
+
         <div data-menu="header-direito" class="header-direito">
           <button data-menu="login" class="login">
             <a href="#"><img src="./assets/svg/login.svg" /></a>
           </button>
-          <button data-menu="favoritos" class="favoritos">
-            <a href="#"><img src="./assets/svg/heart.svg" />Favoritos</a>
-          </button>
           <button data-menu="nossas-lojas" class="nossas-lojas">
-            <a href="#"><img src="./assets/svg/location.svg"</a>
+            <a href="#"><img src="./assets/svg/location.svg" /></a>
           </button>
-          <button data-menu="fale-conosco" class="fale-conosco">
-            <a href="#"
-              ><img src="./assets/svg/fale-conosco.svg" />Fale Conosco</a
-            >
-          </button>
-          <button data-menu="entrar" class="entrar">
-            <a href="#"><img src="./assets/svg/entrar.svg" />Entrar</a>
-          </button>
-
           <button data-menu="minicart" class="minicart">
             <a href="#"><img src="./assets/svg/minicart.svg" /></a>
+          </button>
+          <button data-menu="favoritos" class="favoritos">
+            <a href="#"><img src="./assets/svg/heart.svg" /></a>
+          </button>
+
+          <button data-menu="fale-conosco" class="fale-conosco">
+            <a href="#"><img src="./assets/svg/fale-conosco.svg" /></a>
+          </button>
+          <button data-menu="entrar" class="entrar">
+            <a href="#"><img src="./assets/svg/entrar.svg" /></a>
           </button>
         </div>
       </div>
     </header>
     <script src="./menu-mobile.js"></script>
+    <script src="./dropdown-menu.js"></script>
   </body>
 </html>

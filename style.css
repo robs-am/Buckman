@@ -7,8 +7,36 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.rewards-bar {
+  display: flex;
+  padding-block: 7px;
+  align-items: center;
+  gap: 50px;
+  color: #101820;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.bold {
+  font-weight: 700;
+}
+.entrega,
+.troque,
+.juros,
+.presente {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .header-top {
   margin: 0;
+  height: 33px;
+  background-color: #f1f1f1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .header-bottom {
@@ -17,29 +45,6 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
   overflow-x: hidden;
-}
-
-.header-top {
-  height: 33px;
-  background-color: #f1f1f1;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.rewards-bar {
-  display: flex;
-  padding: 7px 50px;
-  align-items: center;
-  gap: 10px;
-  color: #101820;
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 20px;
-}
-
-.rewards-bar span {
-  font-weight: 700;
 }
 
 .buckman__ul {
@@ -57,9 +62,47 @@ a {
   font-weight: 700;
   font-size: 12px;
 }
-ul:last-child {
+.outlet {
   color: #e32000;
 }
+
+/* dropdown-menu */
+
+[data-dropdown] .dropdown-menu {
+  display: none;
+}
+
+[data-dropdown]:hover .dropdown-menu {
+  display: block;
+}
+
+/* [data-dropdown] {
+  position: relative;
+} */
+
+.dropdown-menu {
+  position: absolute;
+  top: 110px;
+  background: #fff;
+  /*  border: 1px solid #101820; */
+  z-index: 100;
+}
+
+.dropdown-menu li {
+  padding-bottom: 20px;
+  list-style: none;
+}
+
+.dropdown-menu a {
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.dropdown-menu a:hover {
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 2px;
+}
+
 .search-bar {
   display: flex;
   position: relative;
@@ -101,22 +144,48 @@ button {
   background: transparent;
 }
 
-[data-menu="mobile-close"] {
-  display: none;
-}
-[data-menu="button"] {
-  display: none;
-}
-
-.line-mobile {
-  display: none;
-}
-
+.favoritos,
+.fale-conosco,
+.entrar,
+.line-mobile,
+[data-menu="button"],
+[data-menu="mobile-close"],
 [data-menu-aberto="button"] {
   display: none;
 }
 
 @media (max-width: 640px) {
+  .rewards-bar {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-block: 8px;
+    padding-left: 21px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    gap: 28px;
+  }
+
+  .entrega {
+    display: flex;
+    align-items: center;
+  }
+  .troque,
+  .juros,
+  .presente {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+    margin-left: 28px;
+  }
+
+  .header-top {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
   .header-bottom {
     display: flex;
     align-items: center;
@@ -130,7 +199,21 @@ button {
     right: 5%;
   }
 
+  .buckman-logo {
+    margin-top: 14px;
+    margin-bottom: 22px;
+  }
+
+  #site-search {
+    width: 366px;
+    text-align: center;
+  }
+
   /* menu-aberto */
+
+  [data-menu="rewards-bar"].active {
+    display: none;
+  }
 
   [data-menu="button"] {
     display: flex;
@@ -163,43 +246,142 @@ button {
     left: 2%;
     z-index: 350;
     width: 29px;
-    /*  height: 34px;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 16px; */
   }
   [data-menu="list"] {
     display: flex;
     position: absolute;
-    flex-direction: column;
+    flex-direction: column-reverse;
     background: #fff;
     display: none;
     left: 2%;
     z-index: 100;
   }
 
+  .buckman__li:nth-of-type(2) {
+    order: 6;
+  }
+
+  .buckman__li:nth-of-type(1) {
+    order: 5;
+  }
+
+  .buckman__li:nth-of-type(3) {
+    order: 4;
+  }
+
+  .buckman__li:nth-of-type(4) {
+    order: 3;
+  }
+
+  .buckman__li:nth-of-type(5) {
+    order: 2;
+  }
+
+  .buckman__li:nth-of-type(6) {
+    order: 1;
+  }
+
   [data-menu="list"].active {
-    margin-top: 52px;
+    margin-top: 60px;
     width: 95%;
     display: block;
+    display: flex;
     padding-inline: 12px;
   }
 
-  [data-menu="logo"].active {
-    display: none;
-  }
-  [data-menu="search-bar"].active {
-    display: none;
-  }
+  [data-menu="logo"].active,
+  [data-menu="search-bar"].active,
   [data-menu="minicart"].active {
     display: none;
   }
 
+  .outlet {
+    color: #101820;
+  }
+
   [data-menu="login"].active {
     display: block;
+    position: absolute;
+    top: 420px;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
   }
+  [data-menu="login"].active::after {
+    content: "Minha Conta";
+    font-weight: 400;
+    line-height: 20px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  [data-menu="favoritos"].active {
+    display: block;
+    position: absolute;
+    top: 470px;
+    left: 5%;
+    display: flex;
+    gap: 15px;
+  }
+  [data-menu="favoritos"].active::after {
+    content: "Favoritos";
+    font-weight: 400;
+    line-height: 20px;
+
+    font-family: "Montserrat", sans-serif;
+  }
+
   [data-menu="nossas-lojas"].active {
     display: block;
+    position: absolute;
+    top: 520px;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  [data-menu="nossas-lojas"].active::after {
+    content: "Nossas Lojas";
+    font-weight: 400;
+    line-height: 20px;
+
+    font-family: "Montserrat", sans-serif;
+  }
+
+  [data-menu="fale-conosco"].active {
+    display: block;
+    position: absolute;
+    top: 570px;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  [data-menu="fale-conosco"].active::after {
+    content: "Fale Conosco";
+    font-weight: 400;
+    line-height: 20px;
+
+    font-family: "Montserrat", sans-serif;
+  }
+
+  [data-menu="entrar"].active {
+    display: block;
+    position: absolute;
+    top: 620px;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  [data-menu="entrar"].active::after {
+    content: "Entrar";
+    font-weight: 400;
+    line-height: 20px;
+
+    font-family: "Montserrat", sans-serif;
   }
 
   [data-menu="mobile-close"].active {
@@ -212,12 +394,18 @@ button {
 
   .buckman__li {
     padding-inline: 0;
-    padding-block: 15px;
+    padding-block: 12px;
     display: flex;
     justify-content: space-between;
+    animation: slide-right 0.5s ease-in-out 0.2s both;
   }
   .buckman__li::after {
     content: url(./assets/svg/arrow.svg);
+  }
+
+  .line-mobile {
+    display: block;
+    margin-top: 2rem;
   }
 
   .nossas-lojas,
@@ -225,35 +413,7 @@ button {
     display: none;
   }
 
-  .header-top {
-    overflow-y: hidden;
-    height: 35px;
-    overflow-x: scroll;
-  }
-
-  .buckman-logo {
-    margin-top: 14px;
-    margin-bottom: 22px;
-  }
-
-  .rewards-bar {
-    display: flex;
-    flex-direction: row;
-    padding-block: 7px;
-    gap: 7px;
-    padding-inline: 10px;
-  }
-
   .buckman__li {
     padding-left: 0;
-  }
-  #site-search {
-    width: 366px;
-    text-align: center;
-  }
-
-  .line-mobile {
-    display: block;
-    margin-top: 2rem;
   }
 }
