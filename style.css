@@ -56,7 +56,7 @@ body {
   padding: 40px 19px;
 }
 
-a {
+.buckman__li a {
   text-decoration: none;
   color: #101820;
   font-weight: 700;
@@ -306,8 +306,26 @@ button {
     display: block;
   }
 
+  .navbar-wrapper.active {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
   .outlet {
     color: #101820;
+  }
+
+  .login,
+  .nossas-lojas,
+  .favoritos,
+  .fale-conosco,
+  .entrar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
   }
 
   [data-menu="login"].active {
@@ -446,14 +464,21 @@ button {
     z-index: 10;
   }
 
-  .navbar-wrapper.active {
+  /*   .navbar-wrapper.active {
     display: block;
-  }
+  } */
 
   .navbar-wrapper.active .navbar-mobile-header,
   .navbar-wrapper.active .navbar-mobile-footer {
     display: flex;
     justify-content: space-between;
+  }
+
+  .navbar-mobile-footer .navbar-mobile-footer-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
   }
 
   .navbar-mobile-title {
