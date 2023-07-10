@@ -196,6 +196,11 @@ button {
     flex-wrap: wrap;
   }
 
+  .header-bottom.mobile {
+    position: absolute;
+    top: 50px;
+  }
+
   .header-direito .minicart {
     display: none;
   }
@@ -274,7 +279,7 @@ button {
     order: 1;
   }
 
-  .buckman__li .outlet {
+  buckman__li .outlet {
     color: #101820;
   }
 
