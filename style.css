@@ -62,7 +62,7 @@ body {
   font-weight: 700;
   font-size: 12px;
 }
-.outlet {
+.buckman__li .outlet {
   color: #e32000;
 }
 .navbar-mobile-closed .minicart {
@@ -274,6 +274,10 @@ button {
     order: 1;
   }
 
+  .buckman__li .outlet {
+    color: #101820;
+  }
+
   .dropdown-menu {
     position: absolute;
     width: 100%;
@@ -310,10 +314,6 @@ button {
     display: flex;
     flex-direction: column;
     gap: 30px;
-  }
-
-  .outlet {
-    color: #101820;
   }
 
   .login,
