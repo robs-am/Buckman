@@ -65,17 +65,20 @@ a {
 .outlet {
   color: #e32000;
 }
+.navbar-mobile-closed .minicart {
+  display: none;
+}
+@media (min-width: 1024px) {
+  /* dropdown-menu */
 
-/* dropdown-menu */
+  [data-dropdown]:hover .dropdown-menu {
+    display: block;
+  }
+}
 
 [data-dropdown] .dropdown-menu {
   display: none;
 }
-
-[data-dropdown]:hover .dropdown-menu {
-  display: block;
-}
-
 .dropdown-menu {
   position: absolute;
   top: 110px;
@@ -141,16 +144,19 @@ button {
   background: transparent;
 }
 
-.favoritos,
+/* .favoritos,
 .fale-conosco,
 .entrar,
-.line-mobile,
+,
 [data-menu="button"],
 [data-menu="mobile-close"],
 [data-menu-aberto="button"] {
+  display: block;
+} */
+
+.line-mobile {
   display: none;
 }
-
 @media (max-width: 640px) {
   .rewards-bar {
     overflow-x: scroll;
@@ -191,13 +197,11 @@ button {
   }
 
   .header-direito .minicart {
-    position: absolute;
-    top: 44px;
-    right: 5%;
+    display: none;
   }
 
   .buckman-logo {
-    margin-top: 14px;
+    /* margin-top: 14px; */
     margin-bottom: 22px;
   }
 
@@ -215,10 +219,6 @@ button {
   [data-menu="button"] {
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 51px;
-    left: 5%;
-    z-index: 300;
 
     background: none;
     border: none;
@@ -229,7 +229,7 @@ button {
     background-color: transparent;
   }
 
-  [data-menu="button"].active::after {
+  /* [data-menu="button"].active::after {
     content: url(./assets/svg/Menu.svg);
 
     width: 300px;
@@ -242,15 +242,12 @@ button {
     left: 2%;
     z-index: 350;
     width: 29px;
-  }
+  } */
+
   [data-menu="list"] {
     display: flex;
-    position: absolute;
     flex-direction: column-reverse;
     background: #fff;
-    display: none;
-    left: 2%;
-    z-index: 100;
   }
 
   .buckman__li:nth-of-type(2) {
@@ -295,14 +292,18 @@ button {
 
   /*  submenus */
 
-  .buckman__li.novidades.active {
+  /*   .buckman__li.novidades.active {
     display: block;
-  }
+  } */
 
   [data-menu="logo"].active,
   [data-menu="search-bar"].active,
   [data-menu="minicart"].active {
     display: none;
+  }
+
+  .navbar-mobile-closed .minicart {
+    display: block;
   }
 
   .outlet {
@@ -311,9 +312,6 @@ button {
 
   [data-menu="login"].active {
     display: block;
-    position: absolute;
-    top: 420px;
-    left: 5%;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -328,9 +326,6 @@ button {
 
   [data-menu="favoritos"].active {
     display: block;
-    position: absolute;
-    top: 470px;
-    left: 5%;
     display: flex;
     gap: 15px;
   }
@@ -344,9 +339,6 @@ button {
 
   [data-menu="nossas-lojas"].active {
     display: block;
-    position: absolute;
-    top: 520px;
-    left: 5%;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -362,9 +354,6 @@ button {
 
   [data-menu="fale-conosco"].active {
     display: block;
-    position: absolute;
-    top: 570px;
-    left: 5%;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -381,9 +370,6 @@ button {
 
   [data-menu="entrar"].active {
     display: block;
-    position: absolute;
-    top: 620px;
-    left: 5%;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -423,12 +409,69 @@ button {
     margin-top: 2rem;
   }
 
-  .nossas-lojas,
-  .login {
-    display: none;
-  }
-
   .buckman__li {
     padding-left: 0;
   }
+
+  .navbar-mobile-closed {
+    padding-inline: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+  }
+
+  .navbar-wrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 10;
+  }
+
+  .navbar-wrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 10;
+  }
+
+  .navbar-wrapper.active {
+    display: block;
+  }
+
+  .navbar-wrapper.active .navbar-mobile-header,
+  .navbar-wrapper.active .navbar-mobile-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-mobile-title {
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+  }
+
+  .header-direito .login,
+  .header-direito .nossas-lojas {
+    display: none;
+  }
+}
+
+.navbar-mobile-header,
+.navbar-mobile-footer,
+.dropdown-wrapper-header {
+  display: none;
 }

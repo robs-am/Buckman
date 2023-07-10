@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/style.css" />
+    <script language="javascript" src="https://io.vtex.com.br/front-libs/jquery/1.8.3/jquery-1.8.3.min.js?v=1.5.73.2517" type="text/javascript"></script>
     <title>Header Buckman</title>
   </head>
   <body>
@@ -49,8 +50,14 @@
           </div>
         </div>
       </div>
-
+      <div class="navbar-mobile-closed">
+        <button class="btn-menu" data-menu="button"></button>
+          <button data-menu="minicart" class="minicart">
+            <a href="#"><img src="./assets/svg/minicart.svg" /></a>
+          </button>
+          </div>
       <div class="header-bottom">
+        
         <img
           data-menu="logo"
           class="buckman-logo"
@@ -58,74 +65,132 @@
           alt="Logo Buckman"
         />
         <nav class="buckman-navbar">
-          <button data-menu="button"></button>
-          <button data-menu="mobile-close" class="mobile-close">
-            <a href="#"><img src="./assets/svg/x-close.svg" /></a>
-          </button>
-
-          <ul data-menu="list" id="menu" class="buckman__ul">
-            <li data-dropdown id="roupas" class="buckman__li">
-              <a href="#roupas">ROUPAS</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-              </ul>
-            </li>
-            <li data-menu="novidades" data-dropdown class="buckman__li">
-              <a href="#novidades">NOVIDADES</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Blusas</a></li>
-                <li><a href="#">Calças</a></li>
-                <li><a href="#">Calças Jeans</a></li>
-                <li><a href="#">Camisas</a></li>
-                <li><a href="#">Camisetas</a></li>
-              </ul>
-            </li>
-            <li data-dropdown id="basicos" class="buckman__li">
-              <a href="#basicos">BÁSICOS</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-              </ul>
-            </li>
-            <li data-dropdown class="buckman__li">
-              <a href="#alfaiatarias">ALFAIATARIAS </a>
-              <ul class="dropdown-menu">
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-              </ul>
-            </li>
-            <li data-dropdown class="buckman__li">
-              <a href="#calcados">CALÇADOS</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-              </ul>
-            </li>
-            <li data-dropdown class="buckman__li">
-              <a class="outlet" href="#outlet">OUTLET</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-              </ul>
-            </li>
-            <hr class="line-mobile" />
-          </ul>
+          <div class="navbar-wrapper">
+            <div class="navbar-mobile-header">
+              <span class="navbar-mobile-title">Menu</span>
+              <button data-menu="mobile-close" class="mobile-close">
+                <img src="./assets/svg/x-close.svg" />
+              </button>
+            </div>
+            <ul data-menu="list" id="menu" class="buckman__ul">
+              <li id="#roupas" data-dropdown class="buckman__li menu-dropdo">
+                <a href="#roupas">ROUPAS</a>
+                <div class="dropdown-wrapper">
+                  <div class="dropdown-wrapper-header">
+                    <span>Roupas</span>
+                    <button data-menu="dropdown-wrapper-close" class=dropdown-wrapper-close">
+                      <img src="./assets/svg/x-close.svg"/>
+                    </button>
+                  </div>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">item</a></li>
+                    <li><a href="#">item</a></li>
+                    <li><a href="#">item</a></li>
+                    <li><a href="#">item</a></li>
+                    <li><a href="#">item</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li
+                id="#novidades"
+                data-menu="novidades"
+                data-dropdown
+                class="buckman__li"
+              >
+                <a href="#novidades">NOVIDADES</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Blusas</a></li>
+                  <li><a href="#">Calças</a></li>
+                  <li><a href="#">Calças Jeans</a></li>
+                  <li><a href="#">Camisas</a></li>
+                  <li><a href="#">Camisetas</a></li>
+                </ul>
+              </li>
+              <li
+                id="#basicos"
+                data-menu="basicos"
+                data-dropdown
+                class="buckman__li"
+              >
+                <a href="#basicos">BÁSICOS</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                </ul>
+              </li>
+              <li
+                id="#alfaiatarias"
+                data-menu="alfaiatarias"
+                data-dropdown
+                class="buckman__li"
+              >
+                <a href="#alfaiatarias">ALFAIATARIAS </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                </ul>
+              </li>
+              <li
+                id="#calcados"
+                data-menu="calcados"
+                data-dropdown
+                class="buckman__li"
+              >
+                <a href="#calcados">CALÇADOS</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                </ul>
+              </li>
+              <li
+                id="#outlet"
+                data-menu="outlet"
+                data-dropdown
+                class="buckman__li"
+              >
+                <a class="outlet" href="#outlet">OUTLET</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                </ul>
+              </li>
+              <hr class="line-mobile" />
+            </ul>
+            <div class="navbar-mobile-footer">
+              <ul>
+                <li data-menu="login" class="login">
+                  <a href="#"><img src="./assets/svg/login.svg" /></a>
+                </li>
+                <li data-menu="nossas-lojas" class="nossas-lojas">
+                  <a href="#"><img src="./assets/svg/location.svg" /></a>
+                </li>
+               <!--  <li data-menu="minicart" class="minicart">
+                  <a href="#"><img src="./assets/svg/minicart.svg" /></a>
+                </li> -->
+                <li data-menu="favoritos" class="favoritos">
+                  <a href="#"><img src="./assets/svg/heart.svg" /></a>
+                </li>
+                <li data-menu="fale-conosco" class="fale-conosco">
+                  <a href="#"><img src="./assets/svg/fale-conosco.svg" /></a>
+                </li>
+                <li data-menu="entrar" class="entrar">
+                  <a href="#"><img src="./assets/svg/entrar.svg" /></a>
+                </li>
+              </ul>              
+            </div>
+          </div>
         </nav>
 
         <div data-menu="search-bar" class="search-bar">
@@ -149,15 +214,6 @@
           </button>
           <button data-menu="minicart" class="minicart">
             <a href="#"><img src="./assets/svg/minicart.svg" /></a>
-          </button>
-          <button data-menu="favoritos" class="favoritos">
-            <a href="#"><img src="./assets/svg/heart.svg" /></a>
-          </button>
-          <button data-menu="fale-conosco" class="fale-conosco">
-            <a href="#"><img src="./assets/svg/fale-conosco.svg" /></a>
-          </button>
-          <button data-menu="entrar" class="entrar">
-            <a href="#"><img src="./assets/svg/entrar.svg" /></a>
           </button>
         </div>
       </div>

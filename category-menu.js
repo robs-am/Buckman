@@ -1,28 +1,27 @@
-const hideli = document.querySelectorAll(".buckman__li");
+/* function exibirSubMenu() {
+  const submenus = document.querySelectorAll(".buckman__li");
 
-function esconderLi() {
-  // Percorre todos os elementos e os oculta
-  categorias.forEach(function (categoria) {
-    categoria.style.display = "none";
+  // Percorre todos os elementos de submenu e os oculta
+  submenus.forEach(function (submenu) {
+    submenu.style.display = "none";
   });
+
+  // Exibe apenas o submenu da categoria desejada
+  document.getElementById("#novidades").style.display = "block";
+
 }
 
-document
-  .querySelectorAll(".buckman__li")
-  .addEventListener("click", function () {
-    esconderLi(); // Esconde todas as categorias
-    document.querySelector('[data-menu="novidades"]').style.display = "block"; // Mostra apenas a categoria desejada
-  });
+document.getElementById("#novidades").addEventListener("click", function () {
+  exibirSubMenu("#novidades");
+}); */
 
-/* const novidades = document.querySelector('[data-menu="novidades"]');
+/* const novidades = document.getElementById("#novidades");
 
+function toggleSubMenu() {
+  novidades.classList.add("active");
+  if( novidades.style.display === "block" ) {
 
-function showNovidades() {
-  novidades.classList.toggle("active")
-    if (novidades = style.display == 'block') {
+  }
+}
 
-    }
-
-} */
-/* 
-novidades.addEventListener("click", showNovidades); */
+novidades.addEventListener("click", toggleSubMenu); */

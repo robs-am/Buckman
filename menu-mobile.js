@@ -11,22 +11,22 @@ const showLogin = document.querySelector('[data-menu="login"]');
 const showNossasLojas = document.querySelector('[data-menu="nossas-lojas"]');
 const hideRewardsBar = document.querySelector('[data-menu="rewards-bar"]');
 const headerTop = document.querySelector('[data-menu="header-top"]');
+const navbarWrapper = document.querySelector(".navbar-wrapper");
 
 function toggleMenu() {
-  menuList.classList.toggle("active");
-  menuButton.classList.toggle("active");
-  hideLogo.classList.toggle("active");
-  hideSearch.classList.toggle("active");
-  hideMinicart.classList.toggle("active");
-  hideFavoritos.classList.toggle("active");
-  hideFaleConosco.classList.toggle("active");
-  hideEntrar.classList.toggle("active");
-  closeButton.classList.toggle("active");
-  showLogin.classList.toggle("active");
-  showNossasLojas.classList.toggle("active");
-  hideRewardsBar.classList.toggle("active");
-  headerTop.classList.add("active");
+  navbarWrapper.classList.toggle("active");
 }
 
 menuButton.addEventListener("click", toggleMenu);
 closeButton.addEventListener("click", toggleMenu);
+
+$(document).ready(function () {
+  $(".btn-menu").on("click", function () {
+    $(".navbar-wrapper").addClass("active");
+  });
+
+  $(".menu-dropdown").on("click", function (e) {
+    e.preventDefault();
+    $(".dropdown-wrapper", this).addClass("active");
+  });
+});
