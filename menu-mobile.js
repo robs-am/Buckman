@@ -31,15 +31,17 @@ closeButton.addEventListener("click", toggleMenu);
   });
 }) */
 
-const linkCollapse = document.getElementsByClassName("buckman__ul");
-var i;
+const menu = document.querySelectorAll(".menu-dropdown");
+const submenu = document.querySelectorAll(".dropdown-menu");
+// Guarda classes dos menus e submenus
 
-for (i = 0; i < linkCollapse.length; i++) {
-  linkCollapse[i].addEventListener("click", function () {
-    const collapseMenu = this.nextElementSibling;
-    collapseMenu.classList.toggle("showCollapse");
+const showSubMenu = (e) => {
+  const menu = e.target.querySelector(".menu-dropdown");
+  return (menu.style.display = menu.style.display === "" ? "block" : "");
+};
 
-    const rotate = collapseMenu.previousElementSibling;
-    rotate.classList.toggle("rotate");
-  });
-}
+const setMenu = () => {
+  menu.forEach((item) => item.addEventListenener("click", e, showSubMenu));
+};
+
+setMenu();
