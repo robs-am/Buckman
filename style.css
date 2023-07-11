@@ -76,6 +76,7 @@ body {
 
 [data-dropdown]:hover .dropdown-menu {
   display: block;
+  margin-top: 24px;
 }
 .outlet a {
   color: #e32000;
@@ -415,12 +416,15 @@ button {
     padding-inline: 0;
     padding-block: 12px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     animation: slide-right 0.5s ease-in-out 0.2s both;
   }
   .buckman__li::after {
     content: url(./assets/svg/arrow.svg);
     cursor: pointer;
+    position: absolute;
+    right: 7%;
   }
 
   .outlet a {
