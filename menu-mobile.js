@@ -20,7 +20,7 @@ function toggleMenu() {
 menuButton.addEventListener("click", toggleMenu);
 closeButton.addEventListener("click", toggleMenu);
 
-$(document).ready(function () {
+/* $(document).ready(function () {
   $(".btn-menu").on("click", function () {
     $(".navbar-wrapper").addClass("active");
   });
@@ -29,4 +29,17 @@ $(document).ready(function () {
     e.preventDefault();
     $(".dropdown-wrapper", this).addClass("active");
   });
-});
+}) */
+
+const linkCollapse = document.getElementsByClassName("buckman__ul");
+var i;
+
+for (i = 0; i < linkCollapse.length; i++) {
+  linkCollapse[i].addEventListener("click", function () {
+    const collapseMenu = this.nextElementSibling;
+    collapseMenu.classList.toggle("showCollapse");
+
+    const rotate = collapseMenu.previousElementSibling;
+    rotate.classList.toggle("rotate");
+  });
+}

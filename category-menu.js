@@ -1,4 +1,4 @@
-function exibirSubMenu() {
+/* function exibirSubMenu() {
   const submenus = document.querySelectorAll(".buckman__li");
 
   // Percorre todos os elementos de submenu e os oculta
@@ -11,8 +11,21 @@ function exibirSubMenu() {
 }
 
 document.getElementById("#novidades").addEventListener("click", function (e) {
-  e.preventDefault().exibirSubMenu("#novidades");
-});
+  exibirSubMenu("#novidades");
+}); */
+
+/* const linkCollapse = document.getElementsByClassName("buckman__ul");
+var i;
+
+for (i = 0; i < linkCollapse.length; i++) {
+  linkCollapse[i].addEventListener("click", function () {
+    const collapseMenu = this.nextElementSibling;
+    collapseMenu.classList.toggle("showCollapse");
+
+    const rotate = collapseMenu.previousElementSibling;
+    rotate.classList.toggle("rotate");
+  });
+} */
 
 /* const novidades = document.getElementById("#novidades");
 
