@@ -1,4 +1,4 @@
-/* function exibirSubMenu() {
+function exibirSubMenu() {
   const submenus = document.querySelectorAll(".buckman__li");
 
   // Percorre todos os elementos de submenu e os oculta
@@ -8,12 +8,11 @@
 
   // Exibe apenas o submenu da categoria desejada
   document.getElementById("#novidades").style.display = "block";
-
 }
 
-document.getElementById("#novidades").addEventListener("click", function () {
-  exibirSubMenu("#novidades");
-}); */
+document.getElementById("#novidades").addEventListener("click", function (e) {
+  e.preventDefault().exibirSubMenu("#novidades");
+});
 
 /* const novidades = document.getElementById("#novidades");
 
@@ -24,4 +23,5 @@ function toggleSubMenu() {
   }
 }
 
-novidades.addEventListener("click", toggleSubMenu); */
+novidades.addEventListener("click", toggleSubMenu); 
+ */
