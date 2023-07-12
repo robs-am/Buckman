@@ -1,40 +1,15 @@
-/* function exibirSubMenu() {
-  const submenus = document.querySelectorAll(".buckman__li");
+/* const menu = document.querySelectorAll(".menu-dropdown");
+const submenu = document.querySelectorAll(".dropdown-menu");
+// Guarda classes dos menus e submenus
 
-  // Percorre todos os elementos de submenu e os oculta
-  submenus.forEach(function (submenu) {
-    submenu.style.display = "none";
-  });
+const showSubMenu = (e) => {
+  const menu = e.target.querySelector(".menu-dropdown");
+  return (menu.style.display = menu.style.display === "" ? "block" : "");
+};
 
-  // Exibe apenas o submenu da categoria desejada
-  document.getElementById("#novidades").style.display = "block";
-}
+const setMenu = () => {
+  menu.forEach((item) => item.addEventListenener("click", e, showSubMenu));
+};
 
-document.getElementById("#novidades").addEventListener("click", function (e) {
-  exibirSubMenu("#novidades");
-}); */
-
-/* const linkCollapse = document.getElementsByClassName("buckman__ul");
-var i;
-
-for (i = 0; i < linkCollapse.length; i++) {
-  linkCollapse[i].addEventListener("click", function () {
-    const collapseMenu = this.nextElementSibling;
-    collapseMenu.classList.toggle("showCollapse");
-
-    const rotate = collapseMenu.previousElementSibling;
-    rotate.classList.toggle("rotate");
-  });
-} */
-
-/* const novidades = document.getElementById("#novidades");
-
-function toggleSubMenu() {
-  novidades.classList.add("active");
-  if( novidades.style.display === "block" ) {
-
-  }
-}
-
-novidades.addEventListener("click", toggleSubMenu); 
+setMenu();
  */

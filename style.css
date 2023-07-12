@@ -424,7 +424,7 @@ button {
     content: url(./assets/svg/arrow.svg);
     cursor: pointer;
     position: absolute;
-    right: 7%;
+    right: 6%;
   }
 
   .outlet a {
