@@ -12,9 +12,11 @@ const showNossasLojas = document.querySelector('[data-menu="nossas-lojas"]');
 const hideRewardsBar = document.querySelector('[data-menu="rewards-bar"]');
 const headerTop = document.querySelector('[data-menu="header-top"]');
 const navbarWrapper = document.querySelector(".navbar-wrapper");
+const buckmanLi = document.querySelectorAll("[data-dropdown]");
 
 function toggleMenu() {
   navbarWrapper.classList.toggle("active");
+  buckmanLi.classList.toggle("active");
 }
 
 menuButton.addEventListener("click", toggleMenu);
@@ -52,8 +54,22 @@ const showSubMenu = (e) => {
   currentMenu.style.display = "block";
 };
 
+const handleDocumentClick = (e) => {
+  const isMenuClicked = Array.from(e.target.classList).some((className) =>
+    Array.from(menu).some((menuItem) => menuItem.classList.contains(className))
+  );
+
+  if (!isMenuClicked) {
+    menu.forEach((item) => {
+      item.style.display = "";
+      item.querySelector(".dropdown-menu").style.display = "none";
+    });
+  }
+};
+
 const setMenu = () => {
   menu.forEach((item) => item.addEventListener("click", showSubMenu));
+  document.addEventListener("click", handleDocumentClick);
 };
 
 setMenu();
