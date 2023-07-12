@@ -12,15 +12,17 @@ const showNossasLojas = document.querySelector('[data-menu="nossas-lojas"]');
 const hideRewardsBar = document.querySelector('[data-menu="rewards-bar"]');
 const headerTop = document.querySelector('[data-menu="header-top"]');
 const navbarWrapper = document.querySelector(".navbar-wrapper");
-const buckmanLi = document.querySelectorAll("[data-dropdown]");
+/* const menuDropdown = document.querySelectorAll(".menu-dropdown"); */
 
 function toggleMenu() {
   navbarWrapper.classList.toggle("active");
-  buckmanLi.classList.toggle("active");
+  /*   menuDropdown.classList.toggle("active"); */
 }
 
 menuButton.addEventListener("click", toggleMenu);
 closeButton.addEventListener("click", toggleMenu);
+
+//função Juca//
 
 /* $(document).ready(function () {
   $(".btn-menu").on("click", function () {
@@ -33,43 +35,48 @@ closeButton.addEventListener("click", toggleMenu);
   });
 }) */
 
-const menu = document.querySelectorAll(".menu-dropdown");
-const submenu = document.querySelectorAll(".dropdown-menu");
-
-const showSubMenu = (e) => {
-  const currentMenu = e.currentTarget.querySelector(".dropdown-menu");
-
-  menu.forEach((item) => {
-    if (item !== e.currentTarget) {
-      item.style.display = "none";
-    }
-  });
-
-  submenu.forEach((item) => {
-    if (item !== currentMenu) {
-      item.style.display = "none";
-    }
-  });
-
-  currentMenu.style.display = "block";
-};
-
-const handleDocumentClick = (e) => {
-  const isMenuClicked = Array.from(e.target.classList).some((className) =>
-    Array.from(menu).some((menuItem) => menuItem.classList.contains(className))
-  );
-
-  if (!isMenuClicked) {
-    menu.forEach((item) => {
-      item.style.display = "";
-      item.querySelector(".dropdown-menu").style.display = "none";
-    });
-  }
-};
-
 const setMenu = () => {
-  menu.forEach((item) => item.addEventListener("click", showSubMenu));
-  document.addEventListener("click", handleDocumentClick);
+  const screenWidth = window.innerWidth || document.documentElement.clientWidth;
+  if (screenWidth <= 640) {
+    const menu = document.querySelectorAll(".menu-dropdown");
+    const submenu = document.querySelectorAll(".dropdown-menu");
+
+    const showSubMenu = (e) => {
+      const currentMenu = e.currentTarget.querySelector(".dropdown-menu");
+
+      menu.forEach((item) => {
+        if (item !== e.currentTarget) {
+          item.style.display = "none";
+        }
+      });
+
+      submenu.forEach((item) => {
+        if (item !== currentMenu) {
+          item.style.display = "none";
+        }
+      });
+
+      currentMenu.style.display = "block";
+    };
+
+    const handleDocumentClick = (e) => {
+      const isMenuClicked = Array.from(e.target.classList).some((className) =>
+        Array.from(menu).some((menuItem) =>
+          menuItem.classList.contains(className)
+        )
+      );
+
+      if (!isMenuClicked) {
+        menu.forEach((item) => {
+          item.style.display = "";
+          item.querySelector(".dropdown-menu").style.display = "none";
+        });
+      }
+    };
+
+    menu.forEach((item) => item.addEventListener("click", showSubMenu));
+    document.addEventListener("click", handleDocumentClick);
+  }
 };
 
 setMenu();
