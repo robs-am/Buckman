@@ -12,11 +12,11 @@ const showNossasLojas = document.querySelector('[data-menu="nossas-lojas"]');
 const hideRewardsBar = document.querySelector('[data-menu="rewards-bar"]');
 const headerTop = document.querySelector('[data-menu="header-top"]');
 const navbarWrapper = document.querySelector(".navbar-wrapper");
-/* const menuDropdown = document.querySelectorAll(".menu-dropdown"); */
+const menuDropdown = document.querySelectorAll(".menu-dropdown");
 
 function toggleMenu() {
   navbarWrapper.classList.toggle("active");
-  /*   menuDropdown.classList.toggle("active"); */
+  menuDropdown.classList.toggle("active");
 }
 
 menuButton.addEventListener("click", toggleMenu);
